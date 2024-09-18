@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +24,9 @@ export default function RootLayout({
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
         <main className="relative flex min-h-screen flex-col">
+          <Header />
           <div className="flex-1 flex-grow">{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
